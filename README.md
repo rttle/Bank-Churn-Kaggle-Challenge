@@ -30,18 +30,23 @@ The Kaggle challenge tasks competitors with preparing a provided dataset to trai
 
 ### Data Visualization
 The figure below is a summary table of the dataset. Note that the categorical/numerical classification is initial determinations and changed as a better understanding of the dataset was reached.
+
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/c29be876-9dd4-4c3a-92f8-cfb365ba6f30">
 
 The figure below is a portion of a pairplot, which was meant to show relationships of the features through the scatterplots and the distribution of the target variable classes, Exited. The pairplot also easily showed what should be categorical features when bars of data were shown in the scatterplots, like seen below for Tenure.
+
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/a05bb1f4-c531-4c09-91dd-44f2680b56b4">
 
 The figure below is histograms of the original numerical features in the Kaggle dataset. From the histograms, Age has separation in the distributions and looks like the best predictor feature. Balance also looks like it has potential with the center of its Exited distribution having higher frequencies than the Retained distribution.
+
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/0157a124-b445-438a-ad73-1b0938eb670f">
 
 The heatmap below shows that there was little concern for multicollinearity.
+
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/0d0cca16-db4c-4f4f-9f03-f66c79cf8d71">
 
 Below is a bar graph that shows the Kaggle dataset is imbalanced and must be considered when looking at model metrics.
+
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/f75349ca-a36c-44a3-9831-9fb120f05dbb">
 
 
@@ -70,7 +75,9 @@ The most significant issue when training the models was lack of familiarity with
 ### Performance Comparison
 Multiple metrics were computed for the models, including: accuracy, precision, recall, F1, and AUC-ROC score. The score computed from the function within the classifier instance was also included. All were included in a comparison table; however, of importance is F1 and AUC-ROC score due to the imbalanced nature of the dataset.
 Below is table of metrics for the models trained, along with one ROC curve for the best performing model. From the table, XGBoost performed the best in the most informing metrics, F1 and AUC-ROC.
+
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/85abbbb4-b38c-4829-9c46-37918f9f2812">
+
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/f22507b6-97ba-4593-bfa1-5d17d0921905">
 
 ### Conclusions
