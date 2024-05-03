@@ -4,7 +4,7 @@
 This repository holds an attempt to apply machine learning on customer data to predict whether or not they will continue being a bank customer, the data used is provided by Kaggle: https://www.kaggle.com/competitions/playground-series-s4e1/data.
 
 ## Overview
-The Kaggle challenge tasks competitors with preparing a provided dataset to train a model to predict a customer’s Exited status, whether they continue being a customer or not. The dataset is made up of a mix of categorical and numerical features, 13 features in total. This repository shows how this challenge was addressed as a binary classification problem, with data cleaning and feature engineering applied to the provided dataset in preparation for training multiple models to predict Exited status. The best model was then used to predict Exited status on the test dataset provided which has the same features minus the target variable. XGBoost was the best model based on metrics, particularly looking at F1 and AUC-ROC score due to the dataset being imbalanced. 
+The Kaggle challenge tasks competitors with preparing a provided dataset to train a model to predict a customer’s Exited status, whether they continue being a customer or not. The dataset is made up of a mix of categorical and numerical features, 13 features in total. This repository shows how this challenge was addressed as a binary classification problem, with data cleaning and feature engineering applied to the provided dataset in preparation for training multiple models to predict Exited status. The best model was then used to predict Exited status on the test dataset provided which has the same features minus the target variable. XGBoost was the best model based on metrics, particularly looking at AUC-ROC score due to the dataset being imbalanced. 
 
 ## Summary of Workdone
 ### Data
@@ -17,7 +17,9 @@ The Kaggle challenge tasks competitors with preparing a provided dataset to trai
   - Validation: 0
  
 ### Preprocessing / Clean up
-**Missing Values.** There were no missing values to deal with in the provided dataset.
+**Missing Values/Duplicates.** There were no missing values nor duplicates to deal with in the provided dataset.
+
+**Dropped.** All ID columns were dropped from the dataset. ID columns: id, CustomerId, and Surname.
 
 **Outliers.** Outliers in numerical columns were found using the IQR method, 1.5*IQR +/- Q3/Q1, respectively. The outliers were then replaced with either the 5th or 95th percentile.
 
@@ -73,8 +75,8 @@ The most significant issue when training the models was lack of familiarity with
 
 
 ### Performance Comparison
-Multiple metrics were computed for the models, including: accuracy, precision, recall, F1, and AUC-ROC score. The score computed from the function within the classifier instance was also included. All were included in a comparison table; however, of importance is F1 and AUC-ROC score due to the imbalanced nature of the dataset.
-Below is table of metrics for the models trained, along with one ROC curve for the best performing model. From the table, XGBoost performed the best in the most informing metrics, F1 and AUC-ROC.
+Multiple metrics were computed for the models, including: accuracy, precision, recall, F1, and AUC-ROC score. The score computed from the function within the classifier instance was also included. All were included in a comparison table; however, of importance is AUC-ROC score due to the imbalanced nature of the dataset.
+Below is table of metrics for the models trained. From the table, XGBoost performed the best in the most informing metric, AUC-ROC.
 
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/fcc8ff41-6b12-436c-b7f8-2da5570d3a53">
 
@@ -83,7 +85,7 @@ Below is table of metrics for the models trained, along with one ROC curve for t
 Of the models trained, XGBoost did the best at predicting Exited status of bank customers. For the Kaggle challenge, the XGBoost model’s prediction received a Private Score of 0.74835 and a Public Score of 0.74169. In the Private Score Leaderboard when the challenge was live, the Private Score of 0.74835 lands between 3215th and 3216th place.
 
 ### Future Work
-To achieve better results, more data preprocessing should be done. For example, trying to clean up the EstimatedSalary column where there seemed to be a mix of annual salary and hourly wage. More thought and research can be done to see if more informative feature engineering is possible. For the models themselves, doing more extensive hyperparameter tuning could also aid in getting a better model. Also doing further reading into all the available models to see if other less known ones would fit this dataset better.
+To achieve better results, more data preprocessing should be done. For example, trying to clean up the EstimatedSalary column where there seemed to be a mix of annual salary and hourly wage. Turning numerical features into categorical, such as Age and CreditScore, could also provide better data for the machine learning algorithm while also addressing the outliers found through the IQR method. More thought and research can be done to see if more informative feature engineering is possible. For the models themselves, doing more extensive hyperparameter tuning could also aid in getting a better model. Also doing further reading into all the available models to see if other less known ones would fit this dataset better.
 
 ## How to reproduce results
 To reproduce results, download the Churn dataset from Kaggle. Then ensure that the Churn_Preprocess.py file is downloaded from this repository and run the ML_Models.ipynb notebook also found in this repository.
