@@ -61,22 +61,22 @@ Below is a bar graph that shows the Kaggle dataset is imbalanced and must be con
   - Random Forest
   - XGBoost
 - Hyperparameters
-  - C
-  - N Estimators
-  - Max Depth
-  - Max Features
-  - Learning Rate
+  - C: [0.1, 1, 10, 100]
+  - N Estimators: [50, 100, 200]
+  - Max Depth: [3, 4, 5]
+  - Gamma: [1, 0.1, 0.01, 0.001]
+  - Learning Rate: [0.01, 0.1, 0.3]
 
 ### Training
 For initial models, the dataset was split 70% for training and 30% for testing. The models were basic implementation of instances, with some hyperparameter choices. Hyperparameter tuning was stunted due to limitations of the computer used. Cross validation was also done on the XGBoost model. Grid Search was used to perform hyperparameter tuning.
-The most significant issue when training the models was lack of familiarity with machine learning causing implementation to be less streamline. For example, a function was implemented to train multiple models and give metric scores for each; however, it was only at the end that thoughts of cross validation and more extensive hyperparameter tuning were had.
+The most significant issue when training the models was lack of familiarity with machine learning causing implementation to be less streamline. For example, a function was implemented to train multiple models and give metric scores for each; however, it was only at the end that thoughts of cross validation and more extensive hyperparameter tuning were had. The next issue was that hyperparameter tuning using gridsearch took significant time to run.
 
 
 ### Performance Comparison
 Multiple metrics were computed for the models, including: accuracy, precision, recall, F1, and AUC-ROC score. The score computed from the function within the classifier instance was also included. All were included in a comparison table; however, of importance is F1 and AUC-ROC score due to the imbalanced nature of the dataset.
 Below is table of metrics for the models trained, along with one ROC curve for the best performing model. From the table, XGBoost performed the best in the most informing metrics, F1 and AUC-ROC.
 
-<img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/85abbbb4-b38c-4829-9c46-37918f9f2812">
+<img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/fcc8ff41-6b12-436c-b7f8-2da5570d3a53">
 
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/f22507b6-97ba-4593-bfa1-5d17d0921905">
 
@@ -98,8 +98,9 @@ To reproduce results, download the Churn dataset from Kaggle. Then ensure that t
 Data is from the Kaggle Challenge, Binary Classification with a Bank Churn Dataset. https://www.kaggle.com/competitions/playground-series-s4e1
 
 ## Citations
-- Walter Reade & Ashley Chow, Binary Classification with a Bank Churn Dataset, WWW.KAGGLE.COM, Jan. 1, 2024, https://kaggle.com/competitions/playground-series-s4e1.
-- Check if dataframe contains infinity in Python – Pandas, WWW.GEEKSFORGEEKS.ORG, Dec. 26, 2020, https://www.geeksforgeeks.org/check-if-dataframe-contains-infinity-in-python-pandas/.
-- David Fagbuyiro, Understanding the support vector machine (SVM) model, WWW.MEDIUM.COM, Jun. 26, 2023, https://medium.com/@davidfagb/understanding-the-support-vector-machine-svm-model-c8eb9bd54a97.
+- Walter Reade & Ashley Chow, ***Binary Classification with a Bank Churn Dataset***, WWW.KAGGLE.COM, Jan. 1, 2024, https://kaggle.com/competitions/playground-series-s4e1.
+- ***Check if dataframe contains infinity in Python – Pandas***, WWW.GEEKSFORGEEKS.ORG, Dec. 26, 2020, https://www.geeksforgeeks.org/check-if-dataframe-contains-infinity-in-python-pandas/.
+- David Fagbuyiro, ***Understanding the support vector machine (SVM) model***, WWW.MEDIUM.COM, Jun. 26, 2023, https://medium.com/@davidfagb/understanding-the-support-vector-machine-svm-model-c8eb9bd54a97.
+- ***SVM Hyperparameter Tuning using GridSearchCV | ML***, WWW.GEEKSFORGEEKS.ORG, Jan. 11, 2023, https://www.geeksforgeeks.org/svm-hyperparameter-tuning-using-gridsearchcv-ml/.
 
 
