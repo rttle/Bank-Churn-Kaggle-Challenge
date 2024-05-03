@@ -78,7 +78,6 @@ Below is table of metrics for the models trained, along with one ROC curve for t
 
 <img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/fcc8ff41-6b12-436c-b7f8-2da5570d3a53">
 
-<img width="468" alt="image" src="https://github.com/rttle/Bank-Churn-Kaggle-Challenge/assets/143844181/f22507b6-97ba-4593-bfa1-5d17d0921905">
 
 ### Conclusions
 Of the models trained, XGBoost did the best at predicting Exited status of bank customers. For the Kaggle challenge, the XGBoost model’s prediction received a Private Score of 0.74835 and a Public Score of 0.74169. In the Private Score Leaderboard when the challenge was live, the Private Score of 0.74835 lands between 3215th and 3216th place.
@@ -98,9 +97,9 @@ To reproduce results, download the Churn dataset from Kaggle. Then ensure that t
 Data is from the Kaggle Challenge, Binary Classification with a Bank Churn Dataset. https://www.kaggle.com/competitions/playground-series-s4e1
 
 ## Citations
-- Walter Reade & Ashley Chow, ***Binary Classification with a Bank Churn Dataset***, WWW.KAGGLE.COM, Jan. 1, 2024, https://kaggle.com/competitions/playground-series-s4e1.
-- ***Check if dataframe contains infinity in Python – Pandas***, WWW.GEEKSFORGEEKS.ORG, Dec. 26, 2020, https://www.geeksforgeeks.org/check-if-dataframe-contains-infinity-in-python-pandas/.
-- David Fagbuyiro, ***Understanding the support vector machine (SVM) model***, WWW.MEDIUM.COM, Jun. 26, 2023, https://medium.com/@davidfagb/understanding-the-support-vector-machine-svm-model-c8eb9bd54a97.
-- ***SVM Hyperparameter Tuning using GridSearchCV | ML***, WWW.GEEKSFORGEEKS.ORG, Jan. 11, 2023, https://www.geeksforgeeks.org/svm-hyperparameter-tuning-using-gridsearchcv-ml/.
+- Walter Reade & Ashley Chow, *Binary Classification with a Bank Churn Dataset*, WWW.KAGGLE.COM, Jan. 1, 2024, https://kaggle.com/competitions/playground-series-s4e1.
+- *Check if dataframe contains infinity in Python – Pandas*, WWW.GEEKSFORGEEKS.ORG, Dec. 26, 2020, https://www.geeksforgeeks.org/check-if-dataframe-contains-infinity-in-python-pandas/.
+- David Fagbuyiro, *Understanding the support vector machine (SVM) model*, WWW.MEDIUM.COM, Jun. 26, 2023, https://medium.com/@davidfagb/understanding-the-support-vector-machine-svm-model-c8eb9bd54a97.
+- *SVM Hyperparameter Tuning using GridSearchCV | ML*, WWW.GEEKSFORGEEKS.ORG, Jan. 11, 2023, https://www.geeksforgeeks.org/svm-hyperparameter-tuning-using-gridsearchcv-ml/.
 
 
