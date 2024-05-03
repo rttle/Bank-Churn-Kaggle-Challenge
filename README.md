@@ -91,7 +91,7 @@ To reproduce results, download the Churn dataset from Kaggle. Then ensure that t
 ## Overview of files in repository
 - **Preprocessing_Visualization.ipynb:** Notebook that takes the provided Kaggle dataset and prepares it as a dataframe to be used to train models. Also creates tables and visualizations for data understanding.
 - **ML_Models.ipynb:** Notebook that takes a dataset, trains multiple models, compares the models through a metrics table, and prepares a CSV file for submission for the Kaggle challenge.
-- **Churn_Preprocess.py:** Module created to wrap all preprocessing done to the dataset in the preprocessing notebook 
+- **Churn_Preprocess.py:** Module created to wrap all preprocessing done to the dataset in the preprocessing notebook. 
 
 ## Data
 Data is from the Kaggle Challenge, Binary Classification with a Bank Churn Dataset. https://www.kaggle.com/competitions/playground-series-s4e1
